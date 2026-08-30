@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Internet कैसे काम करता है? DNS, IP Address, packets, router, ISP और server को आसान भाषा में समझें।">
+<title>Internet कैसे काम करता है? — Ajeet Blogs</title>
+<style>
+:root{--bg:#05070b;--panel:#0d131b;--panel2:#101923;--text:#f5fff9;--muted:#a5b1ab;--green:#00f5a0;--green2:#00b878;--line:#ffffff14}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:radial-gradient(circle at 10% 0,#073d2c 0,#05070b 30%),var(--bg);color:var(--text);line-height:1.8}
+header{position:sticky;top:0;z-index:20;background:#04070cdd;backdrop-filter:blur(20px);border-bottom:1px solid #00f5a024}
+nav{max-width:1100px;margin:auto;padding:13px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{color:white;text-decoration:none;font-size:22px;font-weight:900}.logo b{color:var(--green)}
+.back{color:var(--green);text-decoration:none;font-weight:800}
+.hero{max-width:900px;margin:auto;padding:75px 20px 45px;text-align:center}
+.tag{display:inline-block;padding:7px 15px;border:1px solid #00f5a033;background:#00f5a00d;color:var(--green);border-radius:30px;font-size:13px;font-weight:900}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.1;margin:20px 0 15px}
+.hero p{color:var(--muted);font-size:18px}
+.meta{margin-top:18px;color:#738079;font-size:14px}
+article{max-width:850px;margin:auto;padding:25px 20px 70px}
+.cover{height:260px;border:1px solid #00f5a022;border-radius:24px;background:radial-gradient(circle at 50% 35%,#0d6a49,#0a1713 45%,#080c11);display:grid;place-items:center;font-size:90px;box-shadow:0 25px 70px #0009;margin-bottom:45px}
+h2{font-size:30px;margin:42px 0 13px}
+h3{font-size:21px;margin:28px 0 8px}
+p{color:#c5cec9;margin:13px 0}
+ul,ol{padding-left:25px;color:#c5cec9}
+li{margin:7px 0}
+.box{background:linear-gradient(145deg,#0e1916,#0a1110);border:1px solid #00f5a026;border-radius:18px;padding:22px;margin:25px 0}
+.box strong{color:var(--green)}
+.flow{display:flex;flex-wrap:wrap;gap:9px;align-items:center;justify-content:center;margin:25px 0}
+.step{padding:10px 13px;border-radius:12px;background:#ffffff08;border:1px solid #ffffff12;font-weight:800}.arrow{color:var(--green);font-weight:900}
+.share{margin-top:50px;padding-top:25px;border-top:1px solid var(--line);color:var(--muted)}
+footer{text-align:center;padding:35px 20px;border-top:1px solid var(--line);color:var(--muted)}footer strong{color:var(--green)}
+@media(max-width:600px){nav{padding:12px 15px}.hero{padding-top:55px}.cover{height:200px;font-size:70px}h2{font-size:26px}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a class="logo" href="index.html">Ajeet <b>Blogs</b></a>
+<a class="back" href="technology.html">← Technology</a>
+</nav>
+</header>
+
+<section class="hero">
+<span class="tag">💻 TECHNOLOGY</span>
+<h1>Internet कैसे काम करता है?</h1>
+<p>जब आप अपने फोन में कोई website खोलते हैं, तो आपके device से लेकर दूर बैठे server तक data का सफर कैसे होता है? आइए इसे आसान भाषा में समझते हैं।</p>
+<div class="meta">Ajeet Blogs • Technology • 8 मिनट पढ़ने का समय</div>
+</section>
+
+<article>
+<div class="cover">🌐</div>
+
+<p>आज हम कुछ ही सेकंड में Google जैसी website खोल लेते हैं, video देखते हैं, message भेजते हैं और online payment करते हैं। यह सब Internet की मदद से संभव होता है। लेकिन Internet आखिर काम कैसे करता है?</p>
+
+<p>सरल शब्दों में, <strong>Internet दुनिया भर में जुड़े computers, phones, servers, routers और networks का बहुत बड़ा network है।</strong> ये devices तय नियमों यानी protocols की मदद से एक-दूसरे के साथ data का आदान-प्रदान करते हैं।</p>
+
+<h2>1. Internet क्या है?</h2>
+<p>Internet किसी एक computer या एक कंपनी का network नहीं है। यह बहुत सारे छोटे-बड़े networks को आपस में जोड़ता है। आपका smartphone जिस network से जुड़ा है, वह आपके Internet Service Provider (ISP) के network से जुड़ता है और फिर data कई networks के रास्ते अपने destination तक पहुँच सकता है।</p>
+
+<div class="box">
+<strong>आसान उदाहरण:</strong> Internet को एक विशाल सड़क व्यवस्था की तरह सोचिए। आपका phone एक घर है, router एक local रास्ता है, ISP एक बड़ी road system है और server वह जगह है जहाँ आपकी requested website का data रखा हो सकता है।
+</div>
+
+<h2>2. जब आप कोई website खोलते हैं तो क्या होता है?</h2>
+<p>मान लीजिए आप browser में <strong>example.com</strong> लिखते हैं। इसके बाद कई steps बहुत तेजी से होते हैं:</p>
+
+<div class="flow">
+<span class="step">📱 आपका Phone</span><span class="arrow">→</span>
+<span class="step">📡 Router/Network</span><span class="arrow">→</span>
+<span class="step">🌐 ISP</span><span class="arrow">→</span>
+<span class="step">🖥️ Server</span><span class="arrow">→</span>
+<span class="step">📱 आपका Phone</span>
+</div>
+
+<p>अब इन steps को एक-एक करके समझते हैं।</p>
+
+<h2>3. DNS क्या करता है?</h2>
+<p>Computers network पर devices को IP addresses के जरिए पहचानते हैं। लेकिन इंसानों के लिए numbers याद रखना मुश्किल है। इसलिए websites के लिए domain names इस्तेमाल किए जाते हैं, जैसे <strong>example.com</strong>।</p>
+
+<p><strong>DNS (Domain Name System)</strong> domain name को उसके संबंधित IP address की जानकारी खोजने में मदद करता है। इसे Internet की phone directory जैसा समझ सकते हैं।</p>
+
+<h2>4. IP Address क्या होता है?</h2>
+<p>IP Address network पर किसी device या service की पहचान के लिए इस्तेमाल होने वाला address होता है। IPv4 addresses का एक सामान्य उदाहरण <strong>192.0.2.1</strong> जैसा दिख सकता है। IPv6 में addresses अलग format में होते हैं और बहुत बड़ा address space देते हैं।</p>
+
+<div class="box">
+<strong>याद रखें:</strong> Domain name इंसानों के लिए आसान नाम है; IP address network communication में address की भूमिका निभाता है।
+</div>
+
+<h2>5. Data packets क्या होते हैं?</h2>
+<p>Internet पर भेजा जाने वाला data अक्सर छोटे-छोटे हिस्सों में भेजा जाता है जिन्हें packets कहा जाता है। किसी webpage की request और response में कई packets शामिल हो सकते हैं। Network protocols इन packets को सही destination तक पहुँचाने और data को संभालने में मदद करते हैं।</p>
+
+<p>इसका फायदा यह है कि बहुत बड़ी information को network पर एक ही विशाल block की तरह भेजने की जरूरत नहीं होती।</p>
+
+<h2>6. Router का काम क्या है?</h2>
+<p>Router network traffic को सही दिशा में भेजने का काम करता है। आपके घर का Wi‑Fi router आपके devices को local network से जोड़ सकता है और Internet की ओर traffic forward कर सकता है। बड़े Internet networks में भी routers traffic के लिए उपलब्ध रास्तों के आधार पर forwarding करते हैं।</p>
+
+<h2>7. ISP क्या है?</h2>
+<p><strong>ISP यानी Internet Service Provider</strong> वह provider है जो आपको Internet connectivity देता है। आपका phone, computer या home router ISP के network के जरिए दूसरे networks और Internet services तक पहुँच सकता है।</p>
+
+<h2>8. Server क्या होता है?</h2>
+<p>Server ऐसा computer या computing system हो सकता है जो websites, files, applications या दूसरी online services उपलब्ध कराता है। जब आप किसी website को खोलते हैं, आपका browser server से resources मांग सकता है और server response वापस भेजता है।</p>
+
+<h2>9. HTTPS और security</h2>
+<p>आज बहुत-सी websites HTTPS का इस्तेमाल करती हैं। HTTPS, HTTP communication को TLS जैसी security technology के साथ protect करता है। इससे browser और website के बीच communication को encryption और authentication जैसी सुरक्षा मिलती है।</p>
+
+<div class="box">
+<strong>ध्यान दें:</strong> HTTPS का मतलब यह नहीं कि Internet पर हर चीज automatically safe है। Strong passwords, software updates और suspicious links से सावधानी रखना भी जरूरी है।
+</div>
+
+<h2>10. पूरी प्रक्रिया एक उदाहरण से</h2>
+<p>मान लीजिए आपने अपने phone में Ajeet Blogs की website खोली:</p>
+
+<ol>
+<li>आप browser में website का domain लिखते हैं।</li>
+<li>Browser domain के लिए जरूरी network information प्राप्त करता है।</li>
+<li>Request network के जरिए server की ओर जाती है।</li>
+<li>Routers traffic को आगे की दिशा में भेजते हैं।</li>
+<li>Server request process करके webpage के resources का response देता है।</li>
+<li>आपका browser received resources को process करके webpage आपकी screen पर दिखाता है।</li>
+</ol>
+
+<h2>11. क्या Internet हमेशा एक ही रास्ते से चलता है?</h2>
+<p>नहीं। Internet में बहुत सारे interconnected networks होते हैं और traffic के लिए routing decisions किए जाते हैं। अलग-अलग situations में data के लिए network path अलग हो सकता है। इसी वजह से Internet एक single cable या single machine नहीं है।</p>
+
+<h2>12. Internet की speed किन चीजों पर निर्भर करती है?</h2>
+<p>आपको मिलने वाली practical speed और responsiveness कई factors पर निर्भर कर सकती है—जैसे आपके connection की क्षमता, Wi‑Fi signal, network congestion, server की स्थिति, दूरी और latency। इसलिए केवल advertised speed देखकर हर website या video की actual performance तय नहीं की जा सकती।</p>
+
+<h2>निष्कर्ष</h2>
+<p>Internet को समझने का सबसे आसान तरीका है इसे interconnected networks की विशाल व्यवस्था मानना। आपका device network से जुड़ता है, domain name से service खोजी जाती है, routers traffic को आगे भेजते हैं और server requested data का response देता है। यह पूरी प्रक्रिया हमें अक्सर कुछ ही क्षणों में दिखाई देती है।</p>
+
+<div class="box">
+<strong>एक लाइन में:</strong> आप request भेजते हैं → network उसे destination तक पहुँचाता है → server response देता है → data वापस आपके device तक आता है → browser उसे webpage के रूप में दिखाता है।
+</div>
+
+<div class="share">
+<strong>📚 Ajeet Blogs</strong><br>
+अगर यह article useful लगा, तो इसे अपने दोस्तों के साथ share करें और Technology के दूसरे articles भी पढ़ें।
+</div>
+</article>
+
+<footer>
+<strong>Ajeet Blogs</strong><br>
+Technology • AI • Coding • Internet • Knowledge
+</footer>
+</body>
+</html>
