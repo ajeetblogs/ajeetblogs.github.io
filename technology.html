@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Technology — Ajeet Blogs</title>
+<style>
+:root{--bg:#05070b;--card:#0d131c;--text:#f5fff9;--muted:#9ca9a3;--green:#00f5a0;--green2:#00b878}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:radial-gradient(circle at 15% 5%,#073d2c 0,#05070b 32%),radial-gradient(circle at 90% 30%,#06251c 0,#05070b 32%),var(--bg);color:var(--text);line-height:1.6}
+header{position:sticky;top:0;z-index:50;background:rgba(4,7,12,.86);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid rgba(0,245,160,.15);box-shadow:0 8px 35px #0008}
+nav{max-width:1200px;margin:auto;padding:13px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{display:flex;align-items:center;gap:11px;color:white;text-decoration:none;font-size:23px;font-weight:900;white-space:nowrap}.logo-mark{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,var(--green),var(--green2));color:#02120c;font-size:15px;font-weight:1000;box-shadow:0 0 25px #00f5a04d}.logo b{color:var(--green)}
+nav ul{display:flex;align-items:center;gap:5px;list-style:none}nav a{display:block;color:#dce8e2;text-decoration:none;font-size:14px;font-weight:800;padding:10px 13px;border-radius:12px;transition:.25s}nav a:hover,nav a.active{color:var(--green);background:#00f5a014}.nav-cta{border:1px solid #00f5a04d;background:#00f5a012}
+.menu-btn{display:none;border:1px solid #00f5a040;background:#00f5a012;color:var(--green);width:43px;height:43px;border-radius:12px;font-size:21px}
+.hero{padding:85px 20px 65px;text-align:center}.badge{display:inline-block;padding:8px 16px;border:1px solid #00f5a033;background:#00f5a00d;border-radius:30px;color:#bfffe9;margin-bottom:18px}.hero h1{font-size:clamp(44px,8vw,76px);line-height:1.05}.hero h1 span{background:linear-gradient(90deg,#fff,var(--green),#7affcf);-webkit-background-clip:text;color:transparent}.hero p{max-width:720px;margin:18px auto 0;color:var(--muted);font-size:18px}
+.container{max-width:1180px;margin:auto;padding:45px 20px}.title{text-align:center;margin-bottom:30px}.title h2{font-size:34px}.title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:linear-gradient(145deg,#111a20,#090e15);border:1px solid #ffffff12;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px #0007;transition:.25s}.card:hover{transform:translateY(-7px);border-color:#00f5a066;box-shadow:0 25px 60px #0009,0 0 25px #00f5a00f}.pic{height:180px;display:grid;place-items:center;font-size:58px;background:radial-gradient(circle,#103f30,#0b1219 65%)}.content{padding:22px}.tag{font-size:12px;color:var(--green);font-weight:900;text-transform:uppercase}.content h3{font-size:20px;margin:7px 0}.content p{color:var(--muted);font-size:14px;margin-bottom:15px}.read{color:var(--green);text-decoration:none;font-weight:800}
+.back{display:inline-block;margin-top:25px;color:var(--green);text-decoration:none;font-weight:800;border:1px solid #00f5a033;padding:11px 17px;border-radius:25px;background:#00f5a00d}
+footer{text-align:center;padding:35px 20px;border-top:1px solid #ffffff15;color:var(--muted);margin-top:30px}footer strong{color:var(--green)}
+@media(max-width:850px){.menu-btn{display:block;margin-left:auto;cursor:pointer}nav ul{display:none;position:absolute;top:68px;left:12px;right:12px;flex-direction:column;align-items:stretch;padding:10px;background:#060a10f7;border:1px solid #00f5a029;border-radius:18px;box-shadow:0 20px 50px #0009}nav ul.open{display:flex}.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:550px){.logo{font-size:20px}.logo-mark{width:39px;height:39px}.grid{grid-template-columns:1fr}.hero{padding-top:65px}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a class="logo" href="index.html"><span class="logo-mark">AJ</span><span>Ajeet <b>Blogs</b></span></a>
+<button class="menu-btn" id="menuBtn" aria-expanded="false">☰</button>
+<ul id="navMenu">
+<li><a href="index.html">Home</a></li>
+<li><a class="active" href="technology.html">Technology</a></li>
+<li><a href="index.html#categories">Categories</a></li>
+<li><a class="nav-cta" href="index.html#contact">Contact ↗</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<div class="badge">💻 Ajeet Blogs • Technology</div>
+<h1>Technology <span>Hub</span></h1>
+<p>AI, smartphones, apps, coding, internet और future technology से जुड़ी आसान और useful जानकारी एक जगह।</p>
+<a class="back" href="index.html">← Back to Ajeet Blogs</a>
+</section>
+
+<section class="container">
+<div class="title"><h2>Latest Technology Articles</h2><p>Technology की दुनिया के topics explore करें</p></div>
+<div class="grid">
+
+<article class="card"><div class="pic">🤖</div><div class="content"><span class="tag">AI</span><h3>Artificial Intelligence क्या है?</h3><p>AI कैसे काम करता है और हमारी daily life में इसका इस्तेमाल कहाँ होता है?</p><a class="read" href="#">Read Article →</a></div></article>
+
+<article class="card"><div class="pic">📱</div><div class="content"><span class="tag">Mobile</span><h3>Smartphone को Smart तरीके से इस्तेमाल करें</h3><p>Phone की productivity बढ़ाने के लिए useful tips और features जानें।</p><a class="read" href="#">Read Article →</a></div></article>
+
+<article class="card"><div class="pic">💻</div><div class="content"><span class="tag">Coding</span><h3>Website बनाना कैसे शुरू करें?</h3><p>HTML, CSS और JavaScript से अपनी पहली website बनाने की basic शुरुआत।</p><a class="read" href="#">Read Article →</a></div></article>
+
+<article class="card"><div class="pic">🔐</div><div class="content"><span class="tag">Security</span><h3>Online Security के जरूरी नियम</h3><p>Strong passwords, phishing awareness और account security के practical tips।</p><a class="read" href="#">Read Article →</a></div></article>
+
+<article class="card"><div class="pic">🌐</div><div class="content"><span class="tag">Internet</span><h3>Internet कैसे काम करता है?</h3><p>Browser से website तक data किस तरह पहुँचता है, आसान भाषा में समझें।</p><a class="read" href="#">Read Article →</a></div></article>
+
+<article class="card"><div class="pic">🚀</div><div class="content"><span class="tag">Future</span><h3>Future Technology के trends</h3><p>आने वाले समय में technology किन क्षेत्रों को बदल सकती है?</p><a class="read" href="#">Read Article →</a></div></article>
+
+</div>
+</section>
+
+<footer><strong>Ajeet Blogs</strong><br>Technology • AI • Coding • Gadgets • Internet</footer>
+
+<script>
+const menuBtn=document.getElementById("menuBtn"),navMenu=document.getElementById("navMenu");
+menuBtn.onclick=()=>{const open=navMenu.classList.toggle("open");menuBtn.setAttribute("aria-expanded",open)};
+document.querySelectorAll("#navMenu a").forEach(a=>a.onclick=()=>navMenu.classList.remove("open"));
+</script>
+</body>
+</html>
