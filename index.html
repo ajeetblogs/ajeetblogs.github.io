@@ -1,4 +1,4 @@
-<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ajeet Blogs — Premium</title><style>
+  <!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ajeet Blogs — Premium</title><style>
 :root{--bg:#080b16;--card:#111729;--text:#f7f8ff;--muted:#aab3ca;--a:#7c5cff;--b:#00d4ff}*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}body{font-family:Arial,sans-serif;background:radial-gradient(circle at 15% 10%,#241b52 0,#080b16 35%),var(--bg);color:var(--text);line-height:1.6}header{position:sticky;top:0;z-index:5;background:#080b16dd;backdrop-filter:blur(15px);border-bottom:1px solid #ffffff18}nav{max-width:1180px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}.logo{font-size:27px;font-weight:900}.logo b{color:var(--b)}nav ul{display:flex;gap:20px;list-style:none}nav a{color:#e6eaff;text-decoration:none;font-weight:700}.hero{min-height:620px;display:grid;place-items:center;text-align:center;padding:70px 20px}.hero>div{max-width:850px}.badge{display:inline-block;border:1px solid #ffffff25;background:#ffffff0a;border-radius:30px;padding:8px 15px;color:#d9e0ff;margin-bottom:20px}h1{font-size:clamp(46px,8vw,82px);line-height:1.05;margin-bottom:20px}h1 span{background:linear-gradient(90deg,#fff,var(--b),var(--a));-webkit-background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:18px;max-width:700px;margin:auto}.btn{display:inline-block;margin-top:28px;padding:14px 25px;border-radius:30px;background:linear-gradient(90deg,var(--a),var(--b));color:white;text-decoration:none;font-weight:800}.container{max-width:1180px;margin:auto;padding:65px 20px}.title{text-align:center;margin-bottom:30px}.title h2{font-size:35px}.title p{color:var(--muted)}.search{max-width:650px;margin:0 auto 32px}.search input{width:100%;padding:15px 20px;border-radius:30px;border:1px solid #ffffff20;background:#ffffff09;color:white;font-size:16px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card,.about,.contact{background:linear-gradient(145deg,#151c32,#0e1425);border:1px solid #ffffff15;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px #0005}.card{transition:.25s}.card:hover{transform:translateY(-7px);border-color:#7c5cff77}.pic{height:190px;display:grid;place-items:center;font-size:60px;background:linear-gradient(135deg,#171e3a,#10162a)}.content{padding:22px}.tag{font-size:12px;color:var(--b);font-weight:900;text-transform:uppercase}.content h3{font-size:20px;margin:7px 0}.content p{color:var(--muted);font-size:14px;margin-bottom:15px}.read{color:white;text-decoration:none;font-weight:800}.cats{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}.cat{padding:11px 18px;border-radius:30px;border:1px solid #ffffff18;background:#ffffff08;color:white;font-weight:700}.about{padding:40px;text-align:center}.about p{max-width:760px;margin:10px auto;color:var(--muted)}.contact{max-width:700px;margin:auto;padding:30px}.contact input,.contact textarea{width:100%;padding:14px;margin-bottom:14px;border-radius:12px;border:1px solid #ffffff18;background:#ffffff08;color:white}.contact textarea{height:140px}.submit{padding:13px 23px;border:0;border-radius:28px;background:linear-gradient(90deg,var(--a),var(--b));color:white;font-weight:800}footer{text-align:center;padding:35px 20px;border-top:1px solid #ffffff15;color:var(--muted)}footer strong{color:white}.love-flow{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:999}.heart{position:absolute;bottom:-40px;animation:float linear forwards}@keyframes float{from{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.9}to{transform:translateY(-110vh) rotate(360deg);opacity:0}}@media(max-width:850px){nav{flex-direction:column;gap:10px}.grid{grid-template-columns:1fr 1fr}}@media(max-width:550px){.grid{grid-template-columns:1fr}.hero{min-height:540px}}
 </style></head><body><header><nav><div class="logo">Ajeet <b>Blogs</b></div><ul><li><a href="#home">Home</a></li><li><a href="#blogs">Blogs</a></li><li><a href="#categories">Categories</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></nav></header>
 <section class="hero" id="home"><div><div class="badge">✨ Welcome to Ajeet Blogs</div><h1>Read. Learn. <span>Grow.</span></h1><p>Technology, career, travel, lifestyle और knowledge की शानदार दुनिया—simple और useful content के साथ।</p><a class="btn" href="#blogs">Explore Blogs →</a></div></section>
@@ -14,92 +14,4 @@
 <section class="container" id="about"><div class="about"><h2>About Ajeet Blogs</h2><p>A modern blogging platform for Technology, Career, Travel, Lifestyle, Knowledge और Finance.</p></div></section>
 <section class="container" id="contact"><div class="title"><h2>Let's Connect</h2><p>कोई सवाल या सुझाव है?</p></div><form class="contact" onsubmit="send(event)"><input required placeholder="आपका नाम"><input required type="email" placeholder="आपका Email"><textarea required placeholder="आपका संदेश..."></textarea><button class="submit">Send Message ✨</button></form></section>
 <div class="love-flow"></div><footer><strong>Ajeet Blogs</strong><br>© 2026 Ajeet Blogs • Stories • Ideas • Knowledge</footer>
-<script>function filter(){let q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none')}function choose(x){document.getElementById('q').value=x;filter();document.getElementById('blogs').scrollIntoView()}function send(e){e.preventDefault();alert('धन्यवाद! आपका संदेश प्राप्त हो गया है।');e.target.reset()}function heart(){let h=document.createElement('span');h.className='heart';h.textContent=['❤️','💕','💖','💗'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'vw';h.style.fontSize=15+Math.random()*25+'px';h.style.animationDuration=5+Math.random()*5+'s';document.querySelector('.love-flow').appendChild(h);setTimeout(()=>h.remove(),10000)}setInterval(heart,650)</script></body></html> <img src="tumblr_58bbbfb8d81243061486cfe8c23336c2_a1ed87ea_500.gif"
-     alt="Ajeet Blogs"
-     style="width:100%;max-width:700px;border-radius:20px;margin-bottom:25px;">
-<h1>Welcome to Ajeet Blogs</h1>
-<p>ज्ञान, टेक्नोलॉजी, करियर, ट्रैवल और लाइफस्टाइल से जुड़ी उपयोगी और दिलचस्प जानकारी पढ़िए।</p>
-<a class="btn" href="#blogs">लेटेस्ट ब्लॉग पढ़ें</a>
-</section>
-
-<section class="container" id="blogs">
-<div class="title"><h2>Latest Blogs</h2><p>हमारे नवीनतम लेख</p></div>
-<div class="search"><input id="search" oninput="filterBlogs()" placeholder="ब्लॉग खोजें..."></div>
-<div class="grid" id="grid">
-<article class="card"><div class="pic">
-  <video controls style="width:100%;height:100%;object-fit:cover;">
-    <source src="VID_20260509_184257.mp4" type="video/mp4">
-    आपका browser video support नहीं करता।
-  </video>
-</div><div class="content"><span class="tag">Technology</span><h3>Technology हमारी जिंदगी कैसे बदल रही है?</h3><p>नई तकनीक और उसके रोजमर्रा के जीवन पर प्रभाव को आसान भाषा में समझें।</p><a class="read" href="#">Read More →</a></div></article>
-<article class="card"><div class="pic">🚀</div><div class="content"><span class="tag">Career</span><h3>Career में आगे बढ़ने के 5 तरीके</h3><p>अपने skills और career growth को बेहतर बनाने के practical ideas।</p><a class="read" href="#">Read More →</a></div></article>
-<article class="card"><div class="pic"><iframe src="https://xhamster46.desi/videos/layla-jenner-my-stepdaughters-hot-friend-xhyOlku" width="560" height="315" style="border:0;" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="content"><span class="tag">Travel</span><h3>Travel से हमें क्या सीखने को मिलता है?</h3><p>नई जगहों और अनुभवों से सीखने के शानदार फायदे जानिए।</p><a class="read" href="#">Read More →</a></div></article>
-<article class="card"><div class="pic">📱</div><div class="content"><span class="tag">Lifestyle</span><h3>Smartphone का smart इस्तेमाल</h3><p>अपने फोन को entertainment के साथ productivity के लिए इस्तेमाल करें।</p><a class="read" href="#">Read More →</a></div></article>
-<article class="card"><div class="pic">💡</div><div class="content"><span class="tag">Knowledge</span><h3>हर दिन कुछ नया सीखने की आदत</h3><p>छोटी-छोटी learning habits लंबे समय में बड़ा बदलाव ला सकती हैं।</p><a class="read" href="#">Read More →</a></div></article>
-<article class="card"><div class="pic">💰</div><div class="content"><span class="tag">Finance</span><h3>पैसे बचाने की आसान आदतें</h3><p>बेहतर money management के लिए कुछ सरल और practical सुझाव।</p><a class="read" href="#">Read More →</a></div></article>
-</div>
-</section>
-
-<section class="container" id="categories">
-<div class="title"><h2>Categories</h2><p>अपनी पसंद का विषय चुनें</p></div>
-<div class="cats"><button class="cat" onclick="choose('Technology')">Technology</button><button class="cat" onclick="choose('Career')">Career</button><button class="cat" onclick="choose('Travel')">Travel</button><button class="cat" onclick="choose('Lifestyle')">Lifestyle</button><button class="cat" onclick="choose('Knowledge')">Knowledge</button><button class="cat" onclick="choose('Finance')">Finance</button></div>
-</section>
-
-<section class="container" id="about"><div class="about"><h2>About Ajeet Blogs</h2><p>Ajeet Blogs एक modern blogging platform है जहाँ Technology, Career, Travel, Lifestyle, Knowledge और Finance से जुड़ी जानकारी सरल भाषा में साझा की जाती है।</p></div></section>
-
-<section class="container" id="contact">
-<div class="title"><h2>Contact Us</h2><p>हमसे संपर्क करें</p></div>
-<form class="contact" onsubmit="send(event)"><input required placeholder="आपका नाम"><input required type="email" placeholder="आपका Email"><textarea required placeholder="आपका संदेश..."></textarea><button class="submit">संदेश भेजें</button></form>
-</section>
-
-<footer><h3>Ajeet Blogs</h3><p>© 2026 Ajeet Blogs • Knowledge • Ideas • Stories</p></footer>
-
-<script>
-function filterBlogs(){
- const q=document.getElementById('search').value.toLowerCase();
- document.querySelectorAll('.card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none');
-}
-function choose(cat){
- document.getElementById('search').value=cat;
- filterBlogs();
- document.getElementById('blogs').scrollIntoView();
-}
-function send(e){e.preventDefault();alert('धन्यवाद! आपका संदेश प्राप्त हो गया है।');e.target.reset();}
-</script>
- <div class="love-flow"></div>
-
-<style>
-.love-flow{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  overflow:hidden;
-  z-index:9999;
-}
-.heart{
-  position:absolute;
-  bottom:-40px;
-  animation:floatHeart linear forwards;
-}
-@keyframes floatHeart{
-  from{transform:translateY(0);opacity:0}
-  15%{opacity:1}
-  to{transform:translateY(-110vh) rotate(360deg);opacity:0}
-}
-</style>
-
-<script>
-function createHeart(){
-  const h=document.createElement("span");
-  h.className="heart";
-  h.textContent=["❤️","💕","💖","💗","💓"][Math.floor(Math.random()*5)];
-  h.style.left=Math.random()*100+"vw";
-  h.style.fontSize=(15+Math.random()*25)+"px";
-  h.style.animationDuration=(5+Math.random()*5)+"s";
-  document.querySelector(".love-flow").appendChild(h);
-  setTimeout(()=>h.remove(),10000);
-}
-setInterval(createHeart,500);
-</script>
-</body>
-</html>
+<script>function filter(){let q=document.getElementById('q').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none')}function choose(x){document.getElementById('q').value=x;filter();document.getElementById('blogs').scrollIntoView()}function send(e){e.preventDefault();alert('धन्यवाद! आपका संदेश प्राप्त हो गया है।');e.target.reset()}function heart(){let h=document.createElement('span');h.className='heart';h.textContent=['❤️','💕','💖','💗'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'vw';h.style.fontSize=15+Math.random()*25+'px';h.style.animationDuration=5+Math.random()*5+'s';document.querySelector('.love-flow').appendChild(h);setTimeout(()=>h.remove(),10000)}setInterval(heart,650)</script></body></html>
