@@ -81,5 +81,40 @@ function choose(cat){
 }
 function send(e){e.preventDefault();alert('धन्यवाद! आपका संदेश प्राप्त हो गया है।');e.target.reset();}
 </script>
+ <div class="love-flow"></div>
+
+<style>
+.love-flow{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:9999;
+}
+.heart{
+  position:absolute;
+  bottom:-40px;
+  animation:floatHeart linear forwards;
+}
+@keyframes floatHeart{
+  from{transform:translateY(0);opacity:0}
+  15%{opacity:1}
+  to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+</style>
+
+<script>
+function createHeart(){
+  const h=document.createElement("span");
+  h.className="heart";
+  h.textContent=["❤️","💕","💖","💗","💓"][Math.floor(Math.random()*5)];
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(15+Math.random()*25)+"px";
+  h.style.animationDuration=(5+Math.random()*5)+"s";
+  document.querySelector(".love-flow").appendChild(h);
+  setTimeout(()=>h.remove(),10000);
+}
+setInterval(createHeart,500);
+</script>
 </body>
 </html>
