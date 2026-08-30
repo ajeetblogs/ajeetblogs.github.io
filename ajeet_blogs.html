@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ajeet Blogs</title>
+<meta name="description" content="Ajeet Blogs — ज्ञान, टेक्नोलॉजी, करियर, यात्रा और लाइफस्टाइल।">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f5f7fb;color:#172033;line-height:1.6}
+header{position:sticky;top:0;z-index:10;background:#fff;box-shadow:0 2px 12px #00000012}
+nav{max-width:1150px;margin:auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:26px;font-weight:800;color:#1677ff}.logo span{color:#111827}
+nav ul{display:flex;gap:22px;list-style:none}nav a{text-decoration:none;color:#263044;font-weight:600}
+.hero{padding:80px 20px;text-align:center;color:#fff;background:linear-gradient(135deg,#1677ff,#6c5ce7)}
+.hero h1{font-size:clamp(38px,7vw,62px);margin-bottom:12px}.hero p{max-width:720px;margin:0 auto 28px;font-size:18px}
+.btn{display:inline-block;padding:13px 25px;border-radius:30px;background:#fff;color:#1677ff;text-decoration:none;font-weight:700}
+.container{max-width:1150px;margin:auto;padding:60px 20px}.title{text-align:center;margin-bottom:32px}.title h2{font-size:32px}.title p{color:#697386}
+.search{max-width:600px;margin:0 auto 35px}.search input{width:100%;padding:15px 20px;border:1px solid #ddd;border-radius:30px;font-size:16px;outline:none}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.card{background:#fff;border-radius:17px;overflow:hidden;box-shadow:0 5px 20px #0000000d;transition:.25s}.card:hover{transform:translateY(-6px)}
+.pic{height:180px;display:grid;place-items:center;font-size:58px;background:#eaf2ff}.content{padding:22px}.tag{font-size:12px;color:#1677ff;font-weight:800;text-transform:uppercase}.content h3{margin:7px 0;font-size:21px}.content p{color:#697386;margin-bottom:14px}.read{color:#1677ff;text-decoration:none;font-weight:700}
+.cats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.cat{border:0;background:#fff;padding:11px 19px;border-radius:25px;box-shadow:0 3px 12px #0000000d;cursor:pointer;font-weight:700}.cat:hover{background:#1677ff;color:#fff}
+.about{background:#fff;padding:40px;border-radius:18px;text-align:center;box-shadow:0 5px 20px #0000000d}.about p{max-width:760px;margin:10px auto;color:#697386}
+.contact{max-width:650px;margin:auto}.contact input,.contact textarea{width:100%;padding:14px;margin-bottom:14px;border:1px solid #ddd;border-radius:10px;font-size:15px}.contact textarea{height:140px;resize:vertical}.submit{border:0;background:#1677ff;color:#fff;padding:13px 24px;border-radius:25px;font-weight:700;cursor:pointer}
+footer{background:#111827;color:#fff;text-align:center;padding:30px 20px}footer p{color:#b9c0cc}
+@media(max-width:800px){nav{flex-direction:column;gap:10px}.grid{grid-template-columns:1fr 1fr}nav ul{flex-wrap:wrap;justify-content:center;gap:12px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding:65px 20px}.about{padding:25px}}
+</style>
+</head>
+<body>
+<header><nav>
+<div class="logo">Ajeet <span>Blogs</span></div>
+<ul><li><a href="#home">Home</a></li><li><a href="#blogs">Blogs</a></li><li><a href="#categories">Categories</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></header>
+
+<section class="hero" id="home">
+<h1>Welcome to Ajeet Blogs</h1>
+<p>ज्ञान, टेक्नोलॉजी, करियर, ट्रैवल और लाइफस्टाइल से जुड़ी उपयोगी और दिलचस्प जानकारी पढ़िए।</p>
+<a class="btn" href="#blogs">लेटेस्ट ब्लॉग पढ़ें</a>
+</section>
+
+<section class="container" id="blogs">
+<div class="title"><h2>Latest Blogs</h2><p>हमारे नवीनतम लेख</p></div>
+<div class="search"><input id="search" oninput="filterBlogs()" placeholder="ब्लॉग खोजें..."></div>
+<div class="grid" id="grid">
+<article class="card"><div class="pic">💻</div><div class="content"><span class="tag">Technology</span><h3>Technology हमारी जिंदगी कैसे बदल रही है?</h3><p>नई तकनीक और उसके रोजमर्रा के जीवन पर प्रभाव को आसान भाषा में समझें।</p><a class="read" href="#">Read More →</a></div></article>
+<article class="card"><div class="pic">🚀</div><div class="content"><span class="tag">Career</span><h3>Career में आगे बढ़ने के 5 तरीके</h3><p>अपने skills और career growth को बेहतर बनाने के practical ideas।</p><a class="read" href="#">Read More →</a></div></article>
+<article class="card"><div class="pic">🌍</div><div class="content"><span class="tag">Travel</span><h3>Travel से हमें क्या सीखने को मिलता है?</h3><p>नई जगहों और अनुभवों से सीखने के शानदार फायदे जानिए।</p><a class="read" href="#">Read More →</a></div></article>
+<article class="card"><div class="pic">📱</div><div class="content"><span class="tag">Lifestyle</span><h3>Smartphone का smart इस्तेमाल</h3><p>अपने फोन को entertainment के साथ productivity के लिए इस्तेमाल करें।</p><a class="read" href="#">Read More →</a></div></article>
+<article class="card"><div class="pic">💡</div><div class="content"><span class="tag">Knowledge</span><h3>हर दिन कुछ नया सीखने की आदत</h3><p>छोटी-छोटी learning habits लंबे समय में बड़ा बदलाव ला सकती हैं।</p><a class="read" href="#">Read More →</a></div></article>
+<article class="card"><div class="pic">💰</div><div class="content"><span class="tag">Finance</span><h3>पैसे बचाने की आसान आदतें</h3><p>बेहतर money management के लिए कुछ सरल और practical सुझाव।</p><a class="read" href="#">Read More →</a></div></article>
+</div>
+</section>
+
+<section class="container" id="categories">
+<div class="title"><h2>Categories</h2><p>अपनी पसंद का विषय चुनें</p></div>
+<div class="cats"><button class="cat" onclick="choose('Technology')">Technology</button><button class="cat" onclick="choose('Career')">Career</button><button class="cat" onclick="choose('Travel')">Travel</button><button class="cat" onclick="choose('Lifestyle')">Lifestyle</button><button class="cat" onclick="choose('Knowledge')">Knowledge</button><button class="cat" onclick="choose('Finance')">Finance</button></div>
+</section>
+
+<section class="container" id="about"><div class="about"><h2>About Ajeet Blogs</h2><p>Ajeet Blogs एक modern blogging platform है जहाँ Technology, Career, Travel, Lifestyle, Knowledge और Finance से जुड़ी जानकारी सरल भाषा में साझा की जाती है।</p></div></section>
+
+<section class="container" id="contact">
+<div class="title"><h2>Contact Us</h2><p>हमसे संपर्क करें</p></div>
+<form class="contact" onsubmit="send(event)"><input required placeholder="आपका नाम"><input required type="email" placeholder="आपका Email"><textarea required placeholder="आपका संदेश..."></textarea><button class="submit">संदेश भेजें</button></form>
+</section>
+
+<footer><h3>Ajeet Blogs</h3><p>© 2026 Ajeet Blogs • Knowledge • Ideas • Stories</p></footer>
+
+<script>
+function filterBlogs(){
+ const q=document.getElementById('search').value.toLowerCase();
+ document.querySelectorAll('.card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none');
+}
+function choose(cat){
+ document.getElementById('search').value=cat;
+ filterBlogs();
+ document.getElementById('blogs').scrollIntoView();
+}
+function send(e){e.preventDefault();alert('धन्यवाद! आपका संदेश प्राप्त हो गया है।');e.target.reset();}
+</script>
+</body>
+</html>
